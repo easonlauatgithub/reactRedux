@@ -40,3 +40,10 @@ export const incrementAsync = amount => dispatch => {
 export const selectCount = state => state.counter.value;
 
 export default counterSlice.reducer;
+
+//createSlice automatically generates action creators with the same names as the reducer functions we wrote
+//console.log(counterSlice.actions.increment()) // {type: "counter/increment"}
+
+//It also generates the slice reducer function that knows how to respond to all these action types
+//const newState = counterSlice.reducer( { value: 10 }, counterSlice.actions.increment() )
+//console.log(newState)// {value: 11}
